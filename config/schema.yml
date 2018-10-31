@@ -5,17 +5,14 @@ types:
   Thing:
     properties:
       name: ~
-  User2:
+  User:
     properties:
+      familyName: { range: "Text" }
+      givenName: { range: "Text" }
       username: { range: "Text" }
       password: { range: "Text" }
       isActive: { range: "Boolean" }
-  Person:
-    properties:
-      familyName: ~
-      givenName: ~
-      additionalName: ~
-      address: ~
+      address: { range: "Text" }
   PostalAddress:
     # Disable the generation of the class hierarchy for this type
     parent: false
@@ -26,5 +23,12 @@ types:
       addressRegion: ~
       postOfficeBoxNumber: ~
       postalCode: ~
-      streetAddress: ~
+      streetAddress:
+  Wehicle:
+    properties:
+      Producer: { range: "Text" }
+      DateProduction: { range: "Date" }
+      Type: { range: "Text" }
+      Model: { range: "Text" }
+
 
